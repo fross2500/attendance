@@ -58,7 +58,7 @@
         </div>
         
         <a href="viewrecords.php" class="btn btn-default">Back To List</a>
-        <button type="submit" name="submit" class="btn btn-outline-dark btn-block">Submit</button>
+        <button type="submit" name="submit" class="btn btn-outline-dark btn-block">Save Changes</button>
     </form>
 
 <?php } ?>
