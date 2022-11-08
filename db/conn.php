@@ -1,17 +1,17 @@
 <?php 
     //in development connetion
-    //$host = '127.0.0.1';
-    //$db = 'attendance_db';
-    //$user = 'root';
-    //$pass = '';
-    //$charset = 'utf8mb4';
+    $host = '127.0.0.1';
+    $db = 'attendance_db';
+    $user = 'root';
+    $pass = '';
+    $charset = 'utf8mb4';
     
     //remote database connection
-    $host = 'applied-web.mysql.database.azure.com';
-    $db = 'attendance_fross';
-    $user = 'appliedweb_user@applied-web';
-    $pass = 'P@ssword1';
-    $charset = 'utf8mb4';
+    //$host = 'applied-web.mysql.database.azure.com';
+    //$db = 'attendance_fross';
+    //$user = 'appliedweb_user@applied-web';
+    //$pass = 'P@ssword1';
+    //$charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
@@ -24,7 +24,11 @@
     }
 
     require_once 'crud.php';
+    require_once 'user.php';
  
    $crud = new crud($pdo);
+   $user = new crud($pdo);
+
+   //$user->insertUser("admin","password");
   
 ?>

@@ -31,7 +31,7 @@
         <div class="form-group">
             <label for="specialty">Area of Expertise</label>
             <select class="form-control" id="specialty" name="specialty">
-            <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
+                <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
                    <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']; ?></option>
                 <?php }?> 
             </select>
