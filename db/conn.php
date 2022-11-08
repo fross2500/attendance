@@ -8,7 +8,7 @@
     
     //remote database connection
     $host = 'applied-web.mysql.database.azure.com';
-    $db = 'attendance_db';
+    $db = 'attendance_fross';
     $user = 'appliedweb_user@applied-web';
     $pass = 'P@ssword1';
     $charset = 'utf8mb4';
