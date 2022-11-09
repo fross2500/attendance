@@ -46,6 +46,14 @@
             <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" >
             <small id="phoneHelp" class="form-text text-muted">We'll never share your number with anyone else.</small>
         </div>
+
+        <br/>
+        <div class="custom-file">
+            
+            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
+            <label class="custom-file-label" for="avatar">Choose File</label>
+            <small id="avatar" class="form-text text-danger">File Upload Is Optional</small>
+        </div>
         <br/>
        
         <button type="submit" name="submit" class="btn btn-primary text-white btn-block" style="width: 67rem;">Submit</button>
