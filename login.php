@@ -3,13 +3,15 @@
 
   require_once 'includes/header.php'; 
   require_once 'db/conn.php'; 
+  require_once 'db/user.php';
+  
 if($_SERVER['REQUEST_METHOD']== 'POST'){
   $username = strtolower(trim($_POST['username']));
   $password =$_POST ['password'];
   $new_password = md5($password.$username);
 
   $user->getUser($username,$new_password);
-  $result - $user->getUser(Susername,$new_password);
+  $result = $user->getUser($username,$new_password);
   if(!$result){
     echo '<div class= "alert alert-danger".username or password is incorrect! Please try again. </div>';
 

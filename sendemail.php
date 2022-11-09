@@ -1,7 +1,7 @@
 <?php
 require 'vender/autoload.php';
 
-class SendEmail{
+Class SendEmail{
 
     public static function SendMail($to,$subject,$content){
         
@@ -19,9 +19,9 @@ class SendEmail{
         $response = $sendgrid->send($email);
         return $response;
     } catch (Exception $e) {
-        echo 'Email exception Caught : '. $e->getMessage() . "\n";
-        return false;
-        //throw $th;
+       echo 'Email exception Caught : '. $e->getMessage() . "\n";
+       return false;
+        throw $th;-ACTUAL COMMENT
     }
 
     }
