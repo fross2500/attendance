@@ -1,5 +1,5 @@
 <?php
-require 'vender/autoload.php';
+require 'vendor/autoload.php';
 
 Class SendEmail{
 
@@ -21,7 +21,7 @@ Class SendEmail{
     } catch (Exception $e) {
        echo 'Email exception Caught : '. $e->getMessage() . "\n";
        return false;
-        throw $th;-ACTUAL COMMENT
+        // throw $th;-ACTUAL COMMENT
     }
 
     }

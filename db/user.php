@@ -8,7 +8,7 @@
             $this->db = $conn;
         }
 
-        public function insetUser($username,$password){
+        public function insertUser($username,$password){
             try {
                 $result = $this->getUserbyUsername($username);
                 if($result['num'] > 0){
@@ -22,7 +22,7 @@
                 $stmt = $this->db->prepare($sql);
                 // bind all placeholders to the actual values
                 $stmt->bindparam(':username',$username);
-                $stmt->bindparam(':password',$password);
+                $stmt->bindparam(':password',$new_password);
 
                 // execute statement
                 $stmt->execute();
@@ -39,7 +39,7 @@
 
         public function getUser($username,$password){
             try{
-                $sql = "select * user where username = :username AND password = :password";
+                $sql = "select * from user where username = :username AND password = :password";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username', $username);
                 $stmt->bindparam(':password', $password);
@@ -57,13 +57,13 @@
         public function getUserbyUsername($username){
 
             try{
-                $sql = "select * counr(*) as num from users where username = :username";
+                $sql = "select count(*) as num from user where username = :username";
                 $stmt = $this->db->prepare($sql);
-                $stmt->bindparam(':username', $username);
+                $stmt->bindparam('username', $username);
                 $stmt->execute();
                 $result = $stmt->fetch();
                 return $result;
-           }catch (PDOException $e) {
+                }catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
             }

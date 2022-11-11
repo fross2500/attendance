@@ -10,7 +10,7 @@
 ?>
 
 
-    <table class="table">
+    <table class="table table-striped table">
         <tr>
             <th>#</th>
             <th>First Name</th>

@@ -1,7 +1,7 @@
 <?php
-if(isset($_SESSION['userid'])){
+if(!isset($_SESSION['userid'])){
 
-    header("Location: logon.php");
+    header("Location: login.php");
 }
 
 ?>
